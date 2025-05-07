@@ -9,7 +9,7 @@ url ="https://www.bog.gov.gh/treasury-and-the-markets/daily-interbank-fx-rates/"
 
 
 
-response = requestsget(url)
-soup = BeautifulSoup(url, "html.parser")
+response = requests.get(url)
+soup = BeautifulSoup(response.content, "html.parser").prettify
 
 print(soup)
